@@ -1,0 +1,38 @@
+<%- include('../layout/header', {title: "Liste des domaine"}); -%>
+	<table id="domainTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	    <thead>
+	        <tr>
+	            <th width="25%">Domaine</th>
+	            <th >Max mail</th>
+	            <th>Max alias</th>
+	            <th>Creer</th>
+	            <th>Modifié</th>
+	            <th>Actif</th>
+	        </tr>
+	    </thead>
+	 
+	    <tfoot>
+	        <tr>
+	            <th>Domaine</th>
+	            <th>Max mail</th>
+	            <th>Max alias</th>
+	            <th>Creer</th>
+	            <th>Modifié</th>
+	            <th>Actif</th>
+	        </tr>
+	    </tfoot>
+	 
+	    <tbody>
+	    	<% domains.forEach(function(domain){ %>
+	        <tr>
+	            <td><%= domain.domain %></td>
+	            <td><%= domain.mailboxes %></td>
+	            <td><%= domain.aliases %></td>
+	            <td>N/a</td>
+	            <td>N/a</td>
+	            <td>N/a</td>
+	        </tr>
+	        <% }); %>
+	    </tbody>
+	</table>	
+<%- include('../layout/footer'); -%>

@@ -1,0 +1,52 @@
+<%- include('../layout/header', {title: "Ajouter un domaine"}); -%>
+<% if (type) { %>
+	<div class="alert alert-info" role="alert">
+        <strong><%- type %></strong> - <%= text.domain %>
+    </div>
+<% } %>
+
+<form method="post" action="/domain/add">
+	<div class="row">
+		<div class="form-group col-md-6">
+		    <label for="domain">Domaine</label>
+		    <input type="text" class="form-control" id="domain" placeholder="Domaine" name="domainname">
+	  	</div>
+		<div class="form-group col-md-2">
+		    <label for="aliases">Alias</label>
+		    <input id="aliases" type="text" value="0" name="domainaliases" class="col-md-8 form-control">
+	  	</div>
+	  	<div class="form-group col-md-2">
+		    <label for="mailboxes">Comptes</label>
+		    <input id="mailboxes" type="text" value="0" name="domainmailboxes" class="col-md-8 form-control">
+	  	</div>
+	  	<div class="form-group col-md-2">
+		    <label for="quota">Quota (Mb)</label>
+		    <input id="quota" type="text" value="0" name="domainquota" class="col-md-8 form-control">
+	  	</div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-6">
+		    <label for="description">Description</label>
+		    <textarea class="form-control" id="description" placeholder="Description" name="domaindescription"></textarea>
+	  	</div>
+	  	<div class="col-md-2">
+		  	<div class="checkbox checkbox-primary">
+	            <input id="active" type="checkbox" name="domainactive">
+	            <label for="active">
+	            	Actif
+	            </label>
+	        </div>
+	        <div class="checkbox checkbox-primary">
+                <input id="backupmx" type="checkbox" name="domainbackupmx">
+                <label for="backupmx">
+                    backup MX
+                </label>
+            </div>
+  		</div>
+	</div>
+	
+	
+	<button type="submit" class="btn btn-success">Envoyer</button>
+</form>
+
+<%- include('../layout/footer'); -%>

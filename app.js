@@ -28,12 +28,15 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 var postroute = {
-	index: require("./routes/index")
+	index: require("./routes/index"),
+	domain: require("./routes/domain")
 };
 
 var index = express.Router();
+var domain = express.Router();
 
 postroute.index(index, connection);
+postroute.domain(domain, connection);
 
 app.use('/', index);
 app.use('/domain', domain);
