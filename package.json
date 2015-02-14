@@ -1,0 +1,35 @@
+{
+  "name": "PostFix-Node",
+  "version": "0.0.1",
+  "description": "Nodejs postfix admin",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DebansNetwork/Postfix-Node"
+  },
+  "keywords": [
+    "Postfix",
+    "nodejs",
+    "mail",
+    "server",
+    "imap",
+    "smtp",
+    "pop",
+    "pop3"
+  ],
+  "author": "norfair00, Debans Network",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DebansNetwork/Postfix-Node/issues"
+  },
+  "homepage": "https://github.com/DebansNetwork/Postfix-Node",
+  "dependencies": {
+    "ejs": "^2.2.4",
+    "express": "^4.11.2",
+    "mysql": "^2.5.4",
+    "path": "^0.11.14"
+  }
+}
